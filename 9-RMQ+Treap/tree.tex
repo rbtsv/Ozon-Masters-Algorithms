@@ -1,0 +1,42 @@
+\documentclass[border=10pt]{standalone}
+\usepackage{tikz}
+
+\usetikzlibrary{automata,positioning,trees,chains,fit,shapes,arrows,decorations}
+
+%\def\NiceNodeStyle{shape=rectangle, rounded corners, draw, align=center, top color=white, bottom color=blue!20}
+
+\begin{document}
+	
+\tikzset{level0/.style={level distance=12cm, sibling angle=170, counterclockwise from=185}}
+	
+	
+\tikzset{level1/.style={level distance=6cm, sibling angle=160, counterclockwise from=190}		}
+\tikzset{level2/.style={level distance=3cm, sibling angle=120, counterclockwise from=210}		}
+\tikzset{level3/.style={level distance=2cm, sibling angle=80, counterclockwise from=230}		}
+
+	
+\begin{tikzpicture}[ every node/.style = {shape=rectangle, rounded corners,
+    draw, align=center,
+    top color=white, bottom color=blue!20}]]
+
+%	[level 1/.style={level distance=12cm, sibling angle=170, counterclockwise from=185},
+%level 2/.style={level distance=6cm, sibling angle=160, counterclockwise from=190},						
+%		 level 3/.style={level distance=3cm, sibling angle=120, counterclockwise from=210}],
+%			% level 4/.style={level distance=0.5cm, sibling angle=45, counterclockwise from=247.5},
+%  every node/.style = {shape=rectangle, rounded corners,
+%    draw, align=center,
+%    top color=white, bottom color=blue!20}]]
+
+%	[level 1/.style={level distance=4.25cm, sibling angle=150, counterclockwise from=195},
+%level 2/.style={level distance=2.5cm, sibling angle=120, counterclockwise from=210},						
+%		 level 3/.style={level distance=2cm, sibling angle=60, counterclockwise from=240}],
+%			 level 4/.style={level distance=0.5cm, sibling angle=45, counterclockwise from=247.5},
+%  every node/.style = {shape=rectangle, rounded corners,
+%    draw, align=center,
+%    top color=white, bottom color=blue!20}]]
+
+ \node[level0]{$-2_{1}$}child[level1]{ node{$-2_{2}$}child[level2]{ node{$-2_{4}$}child[level3]{ node{$1_{8}$}} child[level3]{ node{$-2_{9}$}} } child[level2]{ node{$3_{5}$}child[level3]{ node{$3_{10}$}} child[level3]{ node{$4_{11}$}} } } child[level1]{ node{$1_{3}$}child[level2]{ node{$1_{6}$}child[level3]{ node{$1_{12}$}} child[level3]{ node{$+\infty_{13}$}} } child[level2]{ node{$+\infty_{7}$}child[level3]{ node{$+\infty_{14}$}} child[level3]{ node{$+\infty_{15}$}} } } ;
+  
+\end{tikzpicture}
+\end{document}
+
