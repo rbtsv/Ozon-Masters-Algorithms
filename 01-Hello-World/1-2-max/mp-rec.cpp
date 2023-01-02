@@ -6,7 +6,7 @@ std::pair<int, int> max_two(int n, std::pair<int, int> m12){
 	if(n == 0) return m12;		
 	std::cin >> c;
 	std::pair<int, int> p = (c > m12.first) ? std::make_pair(c, m12.first)
-											: std::make_pair(m12.first, std::max(c, m12.second));
+						: std::make_pair(m12.first, std::max(c, m12.second));
 	return max_two(n-1, p);
 }
 
